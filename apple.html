@@ -8,18 +8,22 @@
   <style>
     /* Premium Color Palette */
     :root {
-      --primary-dark: #0f172a; /* dark slate */
       --accent-gold: #d4af37;
-      --light-gray: #f1f5f9;
-      --muted-gray: #64748b;
+      --background: #fff;
+      --text-dark: #333;
     }
     /* Use system fonts similar to Apple's */
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      background-color: var(--background);
+      color: var(--text-dark);
     }
     h1, h2, h3, h4 {
       font-family: "SF Pro Display", sans-serif;
+    }
+    /* Header transition for shadow */
+    header {
+      transition: box-shadow 0.3s ease;
     }
     /* Button and transition enhancements */
     .btn-shadow {
@@ -30,22 +34,39 @@
     }
   </style>
 </head>
-<body class="antialiased text-gray-900">
-
+<body class="antialiased">
+  
   <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-xl font-bold">AgradeLearning</div>
-      <nav class="space-x-8">
-        <a href="#hero" class="hover:text-gray-600">Home</a>
-        <a href="#features" class="hover:text-gray-600">Features</a>
-        <a href="#how-it-works" class="hover:text-gray-600">How It Works</a>
-        <a href="#pricing" class="hover:text-gray-600">Pricing</a>
-        <a href="#faqs" class="hover:text-gray-600">FAQs</a>
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold">AgradeLearning</div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#hero" class="text-sm hover:text-gray-600">Home</a>
+        <a href="#features" class="text-sm hover:text-gray-600">Features</a>
+        <a href="#how-it-works" class="text-sm hover:text-gray-600">How It Works</a>
+        <a href="#pricing" class="text-sm hover:text-gray-600">Pricing</a>
+        <a href="#faqs" class="text-sm hover:text-gray-600">FAQs</a>
+      </nav>
+      <!-- Mobile Menu Button -->
+      <button id="menu-button" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="md:hidden hidden">
+      <nav class="px-6 pb-4 space-y-2">
+        <a href="#hero" class="block text-sm py-2 hover:bg-gray-200">Home</a>
+        <a href="#features" class="block text-sm py-2 hover:bg-gray-200">Features</a>
+        <a href="#how-it-works" class="block text-sm py-2 hover:bg-gray-200">How It Works</a>
+        <a href="#pricing" class="block text-sm py-2 hover:bg-gray-200">Pricing</a>
+        <a href="#faqs" class="block text-sm py-2 hover:bg-gray-200">FAQs</a>
       </nav>
     </div>
   </header>
-
+  
   <!-- Hero Section -->
   <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?minimal,education');">
     <div class="text-center px-4">
@@ -62,31 +83,31 @@
       <p class="mt-6 text-lg text-gray-600">Launching on July 15, 2025</p>
     </div>
   </section>
-
+  
   <!-- Features Section -->
   <section id="features" class="py-20">
     <div class="container mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div class="text-center">
-          <img src="https://placehold.co/200" alt="Find Tutor" class="mx-auto rounded-full mb-4">
-          <h3 class="text-xl font-semibold mb-2">Find the Perfect Tutor</h3>
-          <p class="text-gray-600">Smart matching to connect you with expert educators.</p>
+          <img src="https://placehold.co/200" alt="Expert Tutors" class="mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold mb-2">Expert Tutors</h3>
+          <p class="text-gray-600">Connect with top-tier professionals for personalized learning.</p>
         </div>
         <div class="text-center">
           <img src="https://placehold.co/200" alt="Seamless Scheduling" class="mx-auto rounded-full mb-4">
           <h3 class="text-xl font-semibold mb-2">Seamless Scheduling</h3>
-          <p class="text-gray-600">Book lessons effortlessly at your convenience.</p>
+          <p class="text-gray-600">Book your sessions effortlessly, on your schedule.</p>
         </div>
         <div class="text-center">
-          <img src="https://placehold.co/200" alt="Verified Tutors" class="mx-auto rounded-full mb-4">
-          <h3 class="text-xl font-semibold mb-2">Verified Tutors</h3>
-          <p class="text-gray-600">Learn from certified professionals and experts.</p>
+          <img src="https://placehold.co/200" alt="Verified Quality" class="mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold mb-2">Verified Quality</h3>
+          <p class="text-gray-600">Learn from certified tutors with proven success.</p>
         </div>
       </div>
     </div>
   </section>
-
+  
   <!-- How It Works Section -->
   <section id="how-it-works" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
@@ -97,16 +118,16 @@
         </div>
         <div class="flex-1 p-6">
           <ol class="space-y-6 text-lg">
-            <li><span class="font-bold">1.</span> Sign up and create your profile.</li>
-            <li><span class="font-bold">2.</span> Get matched with expert tutors.</li>
-            <li><span class="font-bold">3.</span> Schedule and attend lessons.</li>
-            <li><span class="font-bold">4.</span> Provide feedback and excel.</li>
+            <li><span class="font-bold">1.</span> Create your profile and set your learning goals.</li>
+            <li><span class="font-bold">2.</span> Get matched with the perfect tutor.</li>
+            <li><span class="font-bold">3.</span> Schedule sessions at your convenience.</li>
+            <li><span class="font-bold">4.</span> Engage, learn, and grow with feedback.</li>
           </ol>
         </div>
       </div>
     </div>
   </section>
-
+  
   <!-- Pricing Section -->
   <section id="pricing" class="py-20">
     <div class="container mx-auto px-6">
@@ -145,7 +166,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- FAQs Section -->
   <section id="faqs" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
@@ -170,16 +191,16 @@
       </div>
     </div>
   </section>
-
+  
   <!-- Call to Action Section -->
   <section id="cta" class="py-20 bg-black">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Education?</h2>
       <p class="text-lg text-gray-300 mb-8">Join AgradeLearning and experience the future of learning.</p>
-      <a href="#signup" class="px-8 py-3 bg-accent-gold hover:bg-yellow-500 text-primary-dark font-semibold rounded transition-all">Sign Up Now</a>
+      <a href="#signup" class="px-8 py-3 border border-yellow-500 bg-var(--accent-gold) hover:bg-yellow-500 text-yellow-500 hover:text-black font-semibold rounded transition-all">Sign Up Now</a>
     </div>
   </section>
-
+  
   <!-- Footer -->
   <footer class="bg-gray-800 text-gray-300 py-8">
     <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -217,6 +238,26 @@
       <p>© 2025 AgradeLearning Inc. All rights reserved.</p>
     </div>
   </footer>
+  
+  <!-- JavaScript for Mobile Menu Toggle & Header Shadow on Scroll -->
+  <script>
+    // Mobile Menu Toggle
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Header Shadow on Scroll
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 10) {
+        header.classList.add('shadow');
+      } else {
+        header.classList.remove('shadow');
+      }
+    });
+  </script>
   
 </body>
 </html>
