@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgradeLearning - Connect. Learn. Excel.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Premium Color Palette */
+    :root {
+      --primary-dark: #0f172a; /* dark slate */
+      --accent-gold: #d4af37;
+      --light-gray: #f1f5f9;
+      --muted-gray: #64748b;
+    }
+    /* Use system fonts similar to Apple's */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #fff;
+    }
+    h1, h2, h3, h4 {
+      font-family: "SF Pro Display", sans-serif;
+    }
+    /* Button and transition enhancements */
+    .btn-shadow {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .transition-all {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-900">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-xl font-bold">AgradeLearning</div>
+      <nav class="space-x-8">
+        <a href="#hero" class="hover:text-gray-600">Home</a>
+        <a href="#features" class="hover:text-gray-600">Features</a>
+        <a href="#how-it-works" class="hover:text-gray-600">How It Works</a>
+        <a href="#pricing" class="hover:text-gray-600">Pricing</a>
+        <a href="#faqs" class="hover:text-gray-600">FAQs</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?minimal,education');">
+    <div class="text-center px-4">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4">Learn. Connect. Excel.</h1>
+      <p class="text-xl md:text-2xl mb-8">AgradeLearning – The Future of Education is Coming Soon</p>
+      <div class="space-x-4">
+        <a href="#signup" class="px-8 py-3 bg-black text-white font-semibold rounded-full btn-shadow transition-all hover:bg-gray-800">
+          Sign Up
+        </a>
+        <a href="#download" class="px-8 py-3 border border-black text-black font-semibold rounded-full transition-all hover:bg-gray-100">
+          Download App
+        </a>
+      </div>
+      <p class="mt-6 text-lg text-gray-600">Launching on July 15, 2025</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="text-center">
+          <img src="https://placehold.co/200" alt="Find Tutor" class="mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold mb-2">Find the Perfect Tutor</h3>
+          <p class="text-gray-600">Smart matching to connect you with expert educators.</p>
+        </div>
+        <div class="text-center">
+          <img src="https://placehold.co/200" alt="Seamless Scheduling" class="mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold mb-2">Seamless Scheduling</h3>
+          <p class="text-gray-600">Book lessons effortlessly at your convenience.</p>
+        </div>
+        <div class="text-center">
+          <img src="https://placehold.co/200" alt="Verified Tutors" class="mx-auto rounded-full mb-4">
+          <h3 class="text-xl font-semibold mb-2">Verified Tutors</h3>
+          <p class="text-gray-600">Learn from certified professionals and experts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="flex-1 p-6">
+          <img src="https://placehold.co/600x400/000000/FFF" alt="How It Works" class="w-full rounded">
+        </div>
+        <div class="flex-1 p-6">
+          <ol class="space-y-6 text-lg">
+            <li><span class="font-bold">1.</span> Sign up and create your profile.</li>
+            <li><span class="font-bold">2.</span> Get matched with expert tutors.</li>
+            <li><span class="font-bold">3.</span> Schedule and attend lessons.</li>
+            <li><span class="font-bold">4.</span> Provide feedback and excel.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="border p-8 rounded text-center">
+          <h3 class="text-2xl font-semibold mb-4">Free</h3>
+          <p class="text-4xl font-bold mb-4">$0</p>
+          <ul class="space-y-3 mb-6">
+            <li>Basic Access</li>
+            <li>Tutor Search</li>
+            <li>Limited Booking</li>
+          </ul>
+          <a href="#signup" class="px-6 py-2 bg-black text-white rounded transition-all hover:bg-gray-800">Get Started</a>
+        </div>
+        <div class="border p-8 rounded text-center">
+          <h3 class="text-2xl font-semibold mb-4">Pro</h3>
+          <p class="text-4xl font-bold mb-4">$29<span class="text-lg">/mo</span></p>
+          <ul class="space-y-3 mb-6">
+            <li>Priority Matching</li>
+            <li>5 Lesson Bookings</li>
+            <li>Session Recordings</li>
+          </ul>
+          <a href="#signup" class="px-6 py-2 bg-black text-white rounded transition-all hover:bg-gray-800">Get Started</a>
+        </div>
+        <div class="border p-8 rounded text-center">
+          <h3 class="text-2xl font-semibold mb-4">Premium</h3>
+          <p class="text-4xl font-bold mb-4">$49<span class="text-lg">/mo</span></p>
+          <ul class="space-y-3 mb-6">
+            <li>Unlimited Bookings</li>
+            <li>Exclusive Tutor Access</li>
+            <li>AI-driven Insights</li>
+          </ul>
+          <a href="#signup" class="px-6 py-2 bg-black text-white rounded transition-all hover:bg-gray-800">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section id="faqs" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <div class="border-b pb-4">
+          <h4 class="text-xl font-semibold">How are tutors selected and verified?</h4>
+          <p class="mt-2 text-gray-600">All tutors undergo a rigorous selection process including background checks and certifications to ensure quality tutoring.</p>
+        </div>
+        <div class="border-b pb-4">
+          <h4 class="text-xl font-semibold">What does it cost to use AgradeLearning?</h4>
+          <p class="mt-2 text-gray-600">We offer a free plan for basic access and tiered pricing for Pro and Premium plans with advanced features.</p>
+        </div>
+        <div class="border-b pb-4">
+          <h4 class="text-xl font-semibold">How do payments work?</h4>
+          <p class="mt-2 text-gray-600">Payments are processed securely via our integrated gateway. You only pay for the plan or sessions you select.</p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold">Can I switch tutors if I'm not satisfied?</h4>
+          <p class="mt-2 text-gray-600">Yes, our platform allows you to easily switch tutors based on your evolving needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="cta" class="py-20 bg-black">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Education?</h2>
+      <p class="text-lg text-gray-300 mb-8">Join AgradeLearning and experience the future of learning.</p>
+      <a href="#signup" class="px-8 py-3 bg-accent-gold hover:bg-yellow-500 text-primary-dark font-semibold rounded transition-all">Sign Up Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-8">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h4 class="text-xl font-bold text-white mb-4">AgradeLearning</h4>
+        <p class="text-gray-400">Connecting students with certified tutors for a brighter future.</p>
+        <p class="mt-4">Email: support@agradelearning.com</p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#hero" class="hover:text-white">Home</a></li>
+          <li><a href="#features" class="hover:text-white">Features</a></li>
+          <li><a href="#how-it-works" class="hover:text-white">How It Works</a></li>
+          <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+          <li><a href="#faqs" class="hover:text-white">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-white mb-4">Get the App</h4>
+        <div class="flex flex-col space-y-2">
+          <a href="#download" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded text-center">App Store</a>
+          <a href="#download" class="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded text-center">Google Play</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold text-white mb-4">Legal</h4>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-8 text-center border-t border-gray-700 pt-4">
+      <p>© 2025 AgradeLearning Inc. All rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
